@@ -1,7 +1,13 @@
 # vid2vid
-### [Project Github Link](https://github.com/sakshamgupta006/video-to-video-synthesis) | [Website](http://vid-2-vid.herokuapp.com/index.html) | [arXiv](https://arxiv.org/abs/1808.06601) 
+### [Website](http://vid-2-vid.herokuapp.com/index.html) | [arXiv](https://arxiv.org/abs/1808.06601) | [Project Github Link](https://github.com/sakshamgupta006/video-to-video-synthesis)
 
-Pytorch implementation for high-resolution (e.g., 2048x1024) photorealistic video-to-video translation. It can be used for turning semantic label maps into photo-realistic videos, synthesizing people talking from edge maps, or generating human motions from poses. The core of video-to-video translation is image-to-image translation. 
+Our project aims to implement NVIDIA's Video-to-Video Synthesis research paper, the goal of the research is to learn a mapping function from an input source video (sequences of semantic segmentation masks) to an output photo-realistic video that precisely depicts the content of the source video.
+
+## Contributors 
+- Saksham Gupta (saksham@vt.edu)
+- Pronnoy Goswami (pronnoygoswami@vt.edu)
+- Parth Vora (parthv@vt.edu)
+- Mohak Bheda (mohakbheda@vt.edu)
 
 ## Prerequisites
 - Linux 
@@ -64,7 +70,7 @@ Pytorch implementation for high-resolution (e.g., 2048x1024) photorealistic vide
   ```bash
   tensorboard --logdir=runs
   ```
-  
+
 
 ## Citation
 ```
