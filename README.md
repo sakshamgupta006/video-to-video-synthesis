@@ -15,11 +15,24 @@ Pytorch implementation for high-resolution (e.g., 2048x1024) photorealistic vide
 
 
 ## Getting Started
-### Installing required libraries 
+### Installing required libraries and software
+- Download and install [Ananconda](https://www.anaconda.com/distribution/).
+- Create environment
+  ```bash
+  conda create --name env_name
+  ```
+- Install Pytorch 
+  ```bash
+  conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
+  ```
 - Install python libraries [dominate](https://github.com/Knio/dominate), requests and dlib.
-```bash
-pip install dominate requests dlib
-```
+  ```bash
+  pip install dominate requests dlib
+  ```
+- Installing Tensorboard 
+  ```bash
+  pip install tensorboard
+  ```
 ### Dataset
 - Cityscapes 
   - To download the Cityscapes dataset. Use the following link [Cityscapes download](https://www.cityscapes-dataset.com/)
@@ -38,18 +51,21 @@ pip install dominate requests dlib
     ```
     The results will be saved in: `./results/label2city_2048/test_latest/`.
 
+### Training Configuration
+- We use the following platform and hardware to train our model and evaluate results
+    - Ubuntu 18.04 
+    - Cuda 9 with cudnn 7 
+    - Intel Core i7 8700k (8 CPUS)
+    - HyperX 16Gb Ram
+    - Nvidia RTX2080 Graphic Card 
+- Training Time : ~50 hours.
+
 ### Training 
 - First, download the FlowNet2 checkpoint file by running `python scripts/download_models_flownet2.py`.
   - We trained our models using Single RTX2080 GPU. For convenience, we provide some sample training scripts for GPU users. Performance is not guaranteed using these scripts.
   - For example, to train a 256 x 128 video with a single GPU 
   ```bash
   python train.py --name label2city_256_g1 --label_nc 35 --loadSize 256 --use_instance --fg --n_downsample_G 2 --num_D 1 --max_frames_per_gpu 6 --n_frames_total 6
-  ```
-
-### Setting up Tensorboard 
-- First install the tensorboard python files using,
-  ```bash
-  pip install tensorboard
   ```
 - To run tensorboard, 
   ```bash
