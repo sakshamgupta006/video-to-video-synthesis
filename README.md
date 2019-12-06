@@ -44,7 +44,7 @@ Pytorch implementation for high-resolution (e.g., 2048x1024) photorealistic vide
 ### Downloading Datasets Using Scripts
 - To download the dummy dataset, run the script `python scripts/download_datasets.py`.
 - To download the [FlowNet2](https://github.com/NVIDIA/flownet2-pytorch), run the script `python scripts/download_flownet2.py`.
-- To download our pre-trained model for CityScapes datasets, download from the following [link]().
+- To download our pre-trained model for CityScapes datasets, download from the following [link](https://drive.google.com/drive/folders/1x3863a3VKBgfir900gtACczsbC9LQnar?usp=sharing).
   - To test the model 
     ```bash
     python test.py --name label2city_2048 --label_nc 35 --loadSize 1024 --n_scales_spatial 3 --use_instance --fg --use_single_G
