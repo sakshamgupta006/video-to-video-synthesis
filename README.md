@@ -43,12 +43,8 @@ Our project aims to implement NVIDIA's Video-to-Video Synthesis research paper, 
 ### Downloading Datasets Using Scripts
 - To download the dummy dataset, run the script `python scripts/download_datasets.py`.
 - To download the [FlowNet2](https://github.com/NVIDIA/flownet2-pytorch), run the script `python scripts/download_flownet2.py`.
-- To download our pre-trained model for CityScapes datasets, download from the following [link]().
-  - To test the model 
-    ```bash
-    python test.py --name label2city_2048 --label_nc 35 --loadSize 1024 --n_scales_spatial 3 --use_instance --fg --use_single_G
-    ```
-    The results will be saved in: `./results/label2city_2048/test_latest/`.
+- To download our pre-trained model for CityScapes datasets, download from the following [link](https://drive.google.com/open?id=1x3863a3VKBgfir900gtACczsbC9LQnar).
+- Copy the downloaded models to `checkpoints/label2city_256_g1/`
 
 ### Training Configuration
 - We use the following platform and hardware to train our model and evaluate results
