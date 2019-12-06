@@ -46,9 +46,9 @@ Our project aims to implement NVIDIA's Video-to-Video Synthesis research paper, 
 - To download our pre-trained model for CityScapes datasets, download from the following [link]().
   - To test the model 
     ```bash
-    python test.py --name label2city_256 --label_nc 35 --loadSize 256 --n_scales_spatial 3 --use_instance --fg --use_single_G
+    python test.py --name label2city_2048 --label_nc 35 --loadSize 1024 --n_scales_spatial 3 --use_instance --fg --use_single_G
     ```
-    The results will be saved in: `./results/label2city_256/test_latest/`.
+    The results will be saved in: `./results/label2city_2048/test_latest/`.
 
 ### Training Configuration
 - We use the following platform and hardware to train our model and evaluate results
@@ -70,6 +70,13 @@ Our project aims to implement NVIDIA's Video-to-Video Synthesis research paper, 
   ```bash
   tensorboard --logdir=runs
   ```
+  
+### Testing 
+- To test the model:
+  ```bash
+  python test.py --name label2city_256_g1 --label_nc 35 --loadSize 256 --n_scales_spatial 3 --use_instance --fg --use_single_G
+  ```
+    The test results will be saved in: ./results/label2city_256/test_ltest/.
 
 
 ## Citation
